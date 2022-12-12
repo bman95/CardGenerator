@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CardGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Generator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmI-ma-8of">
+                                <rect key="frame" x="20" y="73" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Suit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUi-VB-5ag">
+                                <rect key="frame" x="20" y="154" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xbi-uk-irR">
+                                <rect key="frame" x="142" y="183" width="130" height="32"/>
+                                <segments>
+                                    <segment title="" image="diamond.fill" catalog="system"/>
+                                    <segment title="" image="heart.fill" catalog="system"/>
+                                    <segment title="" image="suit.club.fill" catalog="system"/>
+                                    <segment title="" image="suit.spade.fill" catalog="system"/>
+                                </segments>
+                                <connections>
+                                    <action selector="suitSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="cas-wI-76I"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCU-J4-9rW">
+                                <rect key="frame" x="20" y="281" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="HN9-Ii-hHP">
+                                <rect key="frame" x="160" y="310" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="lsf-cK-9Na"/>
+                                </connections>
+                            </stepper>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtP-D9-KU4">
+                                <rect key="frame" x="94.5" y="376" width="225" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Va5-gu-TjE">
+                                        <rect key="frame" x="49" y="140" width="128" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzV-Kb-uza">
+                                        <rect key="frame" x="8" y="0.0" width="96" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xss-gm-0RZ">
+                                        <rect key="frame" x="121" y="280" width="96" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7725490196" green="0.77647058820000003" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qCU-J4-9rW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5Sp-28-dSc"/>
+                            <constraint firstItem="KUi-VB-5ag" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bkh-aA-Gdf"/>
+                            <constraint firstItem="cmI-ma-8of" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FuU-7Z-y3v"/>
+                            <constraint firstItem="gtP-D9-KU4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.390625" id="Hnl-7h-zGk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cmI-ma-8of" secondAttribute="trailing" constant="20" id="IKT-2c-NJC"/>
+                            <constraint firstItem="qCU-J4-9rW" firstAttribute="top" secondItem="Xbi-uk-irR" secondAttribute="bottom" constant="67" id="IgN-I5-Kml"/>
+                            <constraint firstItem="cmI-ma-8of" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="ORw-wp-K6S"/>
+                            <constraint firstItem="KUi-VB-5ag" firstAttribute="top" secondItem="cmI-ma-8of" secondAttribute="bottom" constant="47.5" id="RGo-Gk-3ew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KUi-VB-5ag" secondAttribute="trailing" constant="20" id="WTZ-bU-bEN"/>
+                            <constraint firstItem="Xbi-uk-irR" firstAttribute="top" secondItem="KUi-VB-5ag" secondAttribute="bottom" constant="8" id="Yh8-6N-GPd"/>
+                            <constraint firstItem="HN9-Ii-hHP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aM8-Mu-um2"/>
+                            <constraint firstItem="gtP-D9-KU4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ccg-XZ-eP4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qCU-J4-9rW" secondAttribute="trailing" constant="20" id="eMf-iw-a87"/>
+                            <constraint firstItem="gtP-D9-KU4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.543478" id="hHy-10-m5s"/>
+                            <constraint firstItem="HN9-Ii-hHP" firstAttribute="top" secondItem="qCU-J4-9rW" secondAttribute="bottom" constant="8" id="hej-rc-mqw"/>
+                            <constraint firstItem="Xbi-uk-irR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.31401" id="jIb-Fg-mGg"/>
+                            <constraint firstItem="Xbi-uk-irR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tp8-Xk-rbR"/>
+                            <constraint firstItem="gtP-D9-KU4" firstAttribute="top" secondItem="HN9-Ii-hHP" secondAttribute="bottom" constant="34" id="xGS-yI-nZ9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomRightCard" destination="Xss-gm-0RZ" id="mP6-f8-99P"/>
+                        <outlet property="cardView" destination="gtP-D9-KU4" id="Trd-gG-jhY"/>
+                        <outlet property="mainCardValue" destination="Va5-gu-TjE" id="5Sk-kN-TI7"/>
+                        <outlet property="segmentControl" destination="Xbi-uk-irR" id="gbk-f8-sBO"/>
+                        <outlet property="stepperControl" destination="HN9-Ii-hHP" id="wBo-r6-hZP"/>
+                        <outlet property="topLeftCard" destination="UzV-Kb-uza" id="oAD-3I-xmp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="3.3482142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="diamond.fill" catalog="system" width="128" height="124"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="suit.club.fill" catalog="system" width="128" height="123"/>
+        <image name="suit.spade.fill" catalog="system" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
