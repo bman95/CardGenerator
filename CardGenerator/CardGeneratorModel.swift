@@ -16,11 +16,7 @@ enum Suit: String {
 
 class CardGenerator {
     
-    var stepperValue: Double = 5 {
-        didSet {
-            print(stepperValue)
-        }
-    }
+    var stepperValue: Double = 5
     
     
     // Mark:- method that presents card value and suit
@@ -47,7 +43,6 @@ class CardGenerator {
         sender.maximumValue = 13
         sender.stepValue = 1
         sender.value = 5
-        print(sender.value)
     }
     
     
